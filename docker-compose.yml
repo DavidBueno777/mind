@@ -1,14 +1,26 @@
-version: "3.3"
-services:
-    mind:
-        container_name: mind
-        image: mrcas/mind:latest
-        volumes:
-            - "mind-db:/app/db"
-        environment:
-            - TZ=Europe/Amsterdam
-        ports:
-            - 8080:8080
+version: '3.9'
 
-volumes:
-    mind-db:
+networks:
+  web:
+    external: 'true'
+
+services:
+  mind:
+    container_name: mind
+    image: 'mrcas/mind:latest'
+    volumes:
+      - './docker-volumes/mind/data:/app/db'
+    env_file: .env
+    expose:
+     - 80
+     - 443
+    labels:
+      # Traefik
+      traefik.enable: 'true'
+      traefik.frontend.rule: "Host:${MIND_HOST}"
+      traefik.port: '8080'
+      # Caddy
+      caddy: ${MIND_HOST}
+      caddy.reverse_proxy: "{{ upstreams 8080 }}"
+    networks:
+     - web
