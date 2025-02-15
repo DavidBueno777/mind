@@ -1,47 +1,45 @@
-# mind
-Programa para Recordatorios
+# MIND
 
-¿Que es este repositorio?
+[![Docker Pulls](https://img.shields.io/docker/pulls/mrcas/mind.svg)](https://hub.docker.com/r/mrcas/mind)
 
-Una sencilla aplicación de recordatorios alojada en su dispositivo que puede enviar notificaciones automáticas. ¡Configure el recordatorio y olvídese de él!
+__A simple self hosted reminder application that can send push notifications to your device. Set the reminder and forget about it!__
 
-Mind es una sencilla aplicación alojada en el servidor propio para crear recordatorios que se envían a tu dispositivo mediante la API de Apprise . Puedes enviar mensajes a prácticamente cualquier plataforma, ¡incluso correos electrónicos programados!
-<br>
-<br>
+Mind is a simple self hosted application for creating reminders that get pushed to your device using the [Apprise](https://github.com/caronc/apprise) API. You can send messages to just about every platform, including scheduled emails!
 
-![image](https://github.com/user-attachments/assets/24ef7f16-a3a4-45e6-96a1-6a6e7e19329a)
-<br>
-<br>
+## Workings
 
-![image](https://github.com/user-attachments/assets/7a351ec5-dde1-4940-820c-b64ffd64d945)
-<br>
-<br>
+MIND can be used for sending notifications at the desired time. This can be a set time, like a yearly reminder for a birthday, or at a button click, to easily send a predefined notification when you want to. The notification can be sent to 80+ platforms with the integration of [Apprise](https://github.com/caronc/apprise).
 
-![image](https://github.com/user-attachments/assets/9f828229-5f35-4ee4-9f3f-2b72dfa68c11)
-<br>
-<br>
+## Features
 
-Funcionamiento
+- Works cross-timezone
 
-MIND se puede utilizar para enviar notificaciones a la hora deseada. Puede ser una hora fija, como un recordatorio anual de un cumpleaños, o con solo hacer clic en un botón, para enviar fácilmente una notificación predefinida cuando lo desee. La notificación se puede enviar a más de 80 plataformas con la integración de Apprise .
-<br>
-<br>
-Características
+- Notifications are sent with second-precision
 
-Funciona en distintas zonas horarias
+- Fine control over repetition: single time, time interval, certain weekdays or manual trigger.
 
-Las notificaciones se envían con precisión de segundos.
+- Uses the [Apprise library](https://github.com/caronc/apprise), giving you 80+ platforms to send notifications to and the option to send to multiple platforms for each reminder
 
-Control fino sobre la repetición: vez única, intervalo de tiempo, determinados días de la semana o activación manual.
+- Easily manage the reminders with sorting options, search ability and color coding
 
-Utiliza la biblioteca Apprise , que le ofrece más de 80 plataformas para enviar notificaciones y la opción de enviar a múltiples plataformas para cada recordatorio.
+- An admin panel for user management, settings and backups
 
-Administre fácilmente los recordatorios con opciones de clasificación, capacidad de búsqueda y codificación por colores.
+- Docker image available
 
-Un panel de administración para la gestión de usuarios, configuraciones y copias de seguridad.
+- Mobile friendly web-interface
 
-Imagen de Docker disponible
+- API available
 
-Interfaz web optimizada para dispositivos móviles
+## Installation, support and documentation
 
-API disponible
+- For instructions on how to install MIND, see the [installation documentation](https://casvt.github.io/MIND/installation/installation)
+
+- For support, a [discord server](https://discord.gg/nMNdgG7vsE) is available or [make an issue](https://github.com/Casvt/MIND/issues)
+
+- For all documentation, see the [documentation hub](https://casvt.github.io/MIND).
+
+## Screenshots
+
+<img src="https://github.com/Casvt/Kapowarr/assets/88994465/f55c895b-7975-4a3e-88a0-f8e2a148bf8a" style="width: max(45%, 400px); margin: .5rem;">
+<img src="https://github.com/Casvt/Kapowarr/assets/88994465/63d72943-0c88-4315-9a8a-01a5dc5f6f15" style="width: max(45%, 400px); margin: .5rem;">
+<img src="https://github.com/Casvt/Kapowarr/assets/88994465/1f9cc9a2-ced5-49a2-b779-93528bb50bd4" style="width: max(45%, 400px); margin: .5rem;">
